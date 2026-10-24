@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVTV — Cinematic UK &amp; Sky TV Live Player</title>
+  <meta name="description" content="Stream 70 live UK Freeview &amp; Sky TV channels in crystal-clear high definition with cinema theater mode, instant channel-surfing, and real-time live EPG guides.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/ivtv-mark-32.png?v=51">
+  <link rel="icon" href="assets/ivtv.ico?v=51">
+  
+  <meta name="theme-color" content="#00ff88">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="IVTV">
+  <meta name="application-name" content="IVTV">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png?v=51">
+  
+  <!-- CSS Stylesheets (Zero External Dependencies) -->
+  <link rel="stylesheet" href="css/variables.css?v=40">
+  <link rel="stylesheet" href="css/fonts.css?v=40">
+  <link rel="stylesheet" href="css/main.css?v=64">
+  <link rel="stylesheet" href="css/components.css?v=47">
+  <link rel="stylesheet" href="css/player.css?v=56">
+  <link rel="stylesheet" href="css/epg.css?v=43">
+
+  <!-- HLS.js for Pure Ad-Free Live Stream Playback (Local Zero-Latency with CDN Fallback) -->
+  <script src="js/hls.min.js?v=11"></script>
+  <script>if (!window.Hls) { document.write('<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"><\/script>'); }</script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       FLOATING GLASS NAVBAR & STANDALONE BRAND LOGO
+       ========================================================================== -->
+  <header class="app-header">
+    <div class="header-inner">
+      <!-- Standalone Brand Logo (Separated from Navigation Bar) -->
+      <a href="#" class="brand-logo" id="brand-home-link" title="IVTV — Cinematic Live TV Player">
+        <img src="assets/images/ivtv-logo.png?v=57" alt="IVTV" class="brand-logo-image" />
+      </a>
+
+      <!-- Navigation Bar (Minimized by Default, Expands on Click to Half Width Aligned to the Right) -->
+      <nav class="navbar-glass minimized" id="navbar-glass" aria-label="Main Navigation">
+        <!-- Minimized State Trigger Pill -->
+        <button class="nav-expand-btn" id="nav-expand-btn" title="Click to expand navigation bar (or press /)" aria-expanded="false" aria-controls="nav-expanded-content">
+          <span class="nav-expand-icon" aria-hidden="true">
+            <span class="burger-lines">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </span>
+          </span>
+          <span class="nav-expand-label">Menu</span>
+          <span class="nav-expand-search-icon" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <span class="nav-expand-chip">70 HD</span>
+        </button>
+
+        <!-- Expanded Navbar Container -->
+        <div class="nav-expanded-content" id="nav-expanded-content">
+          <!-- Minimize Close Button -->
+          <button class="nav-minimize-btn" id="nav-minimize-btn" title="Minimize Navigation Bar (Esc)">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>Minimize</span>
+          </button>
+
+          <!-- Burger Menu (Home & Quick Destinations) -->
+          <div class="nav-burger-wrapper" id="nav-burger-wrapper">
+            <button class="nav-burger-btn" id="nav-burger-btn" title="Navigation Menu" aria-haspopup="true" aria-expanded="false" aria-label="Open Navigation Menu">
+              <span class="burger-lines" aria-hidden="true">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </span>
+            </button>
+            <div class="nav-burger-dropdown" id="nav-burger-dropdown" role="menu">
+              <div class="nav-burger-header">
+                <span class="nav-burger-title">Navigation</span>
+              </div>
+              <button class="nav-burger-item active" data-nav="home" role="menuitem">
+                <span class="nav-burger-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </span>
+                <div class="nav-burger-text">
+                  <span class="nav-burger-label">Home</span>
+                  <span class="nav-burger-hint">Top of Showcase</span>
+                </div>
+              </button>
+              <div class="nav-burger-divider"></div>
+              <button class="nav-burger-item" data-nav="guide" role="menuitem">
+                <span class="nav-burger-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                </span>
+                <div class="nav-burger-text">
+                  <span class="nav-burger-label">TV Guide & Listings</span>
+                  <span class="nav-burger-hint">Press G</span>
+                </div>
+              </button>
+              <button class="nav-burger-item" data-nav="favorites" role="menuitem">
+                <span class="nav-burger-icon" style="color: var(--accent-gold);">★</span>
+                <div class="nav-burger-text">
+                  <span class="nav-burger-label">Favorite Channels</span>
+                  <span class="nav-burger-hint">Watchlist</span>
+                </div>
+              </button>
+              <div class="nav-burger-divider"></div>
+              <button class="nav-burger-item" id="nav-install-app-btn" role="menuitem">
+                <span class="nav-burger-icon" style="color: var(--accent-neon, #00ff88);">💻</span>
+                <div class="nav-burger-text">
+                  <span class="nav-burger-label">Download Standalone App</span>
+                  <span class="nav-burger-hint">Windows Desktop App</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Center Navigation Pills (Scrollable horizontally) -->
+          <ul class="nav-pills" id="header-nav-pills">
+            <li><button class="nav-pill-btn" data-nav="most-viewed">Most Viewed</button></li>
+            <li><button class="nav-pill-btn" data-nav="freeview">Freeview</button></li>
+            <li><button class="nav-pill-btn" data-nav="us-tv">US TV</button></li>
+            <li><button class="nav-pill-btn" data-nav="sky">Sky Channels</button></li>
+            <li><button class="nav-pill-btn" data-nav="Entertainment">Entertainment</button></li>
+            <li><button class="nav-pill-btn" data-nav="News">News</button></li>
+            <li><button class="nav-pill-btn" data-nav="Cinema">Cinema</button></li>
+            <li>
+              <button class="nav-pill-btn nav-pill-icon-btn" data-nav="guide" title="Open TV Guide (G)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>TV Guide</span>
+              </button>
+            </li>
+            <li>
+              <button class="nav-pill-btn nav-pill-icon-btn" data-nav="favorites" title="View Watchlist">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Favorites</span>
+              </button>
+            </li>
+          </ul>
+
+          <!-- Nav Actions (Search & Settings) -->
+          <div class="nav-actions">
+            <div class="search-box">
+              <span class="search-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </span>
+              <input type="text" id="nav-search-input" class="search-input" placeholder="Search..." autocomplete="off">
+              <span class="search-shortcut"><kbd>/</kbd></span>
+            </div>
+
+            <!-- Real-Time Network / Offline Status Indicator -->
+            <div class="network-status-pill online" id="network-status-pill" title="Network status: Connected">
+              <span class="status-pulse-dot"></span>
+              <span class="status-text" id="network-status-text">ONLINE</span>
+            </div>
+
+            <button class="action-icon-btn" id="app-reload-btn" title="Reload TV Player & Refresh Channels (Ctrl+R)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            </button>
+
+            <button class="action-icon-btn" id="vpn-info-btn" title="VPN / ISP Streaming Advisory" onclick="window.showToast('Note: If streams do not load, use a VPN connected to a UK or European server to bypass ISP restrictions.', 'info')">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SHOWCASE SECTION
+       ========================================================================== -->
+  <section class="hero-showcase" id="hero-section">
+    <div class="hero-backdrop-container">
+      <video id="hero-backdrop-video" class="hero-backdrop-video" autoplay muted playsinline preload="auto">
+        <source src="assets/videos/ivtv-intro.mp4" type="video/mp4">
+      </video>
+      <img id="hero-backdrop-img" class="hero-backdrop-img" src="assets/images/hero-cinema-neon.jpg" alt="Featured Sky Broadcast & Streaming Hits">
+      <div class="hero-gradient-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <!-- Hero Details Left -->
+        <div class="hero-info">
+          <div class="hero-metadata" id="hero-badges" style="display: none;"></div>
+
+          <h1 class="hero-title" id="hero-title">BLOCKBUSTERS & HIT SERIES</h1>
+          <p class="hero-description" id="hero-desc">
+            Stream world-class television, award-winning drama, and Hollywood cinema hits. Live Premier League, Sky Cinema premieres, and prestige originals all in one destination.
+          </p>
+
+        </div>
+
+        <!-- Hero Right Mini Thumbnails Carousel -->
+        <div class="hero-slider-wrap">
+          <div class="hero-cta-group">
+            <button class="hero-watch-live-btn" id="hero-play-btn" title="Watch Live Broadcast (Space or Enter)">
+              <span class="live-play-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+              </span>
+              <span class="hero-btn-label">Watch Live</span>
+            </button>
+
+            <button class="hero-glass-btn hero-guide-btn" id="hero-guide-btn" title="Open Interactive TV Guide & Listings (Press G)">
+              <span class="hero-btn-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </span>
+              <span class="hero-btn-label">TV Guide</span>
+              <kbd class="hero-kbd-pill" title="Press G on keyboard">G</kbd>
+            </button>
+
+            <button class="hero-glass-btn hero-browse-btn" id="hero-browse-btn" title="Browse live channels">
+              <span class="hero-btn-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/>
+                  <polyline points="17 2 12 7 7 2"/>
+                </svg>
+              </span>
+              <span class="hero-btn-label">Browse Channels</span>
+            </button>
+          </div>
+          <div class="hero-controls">
+            <div class="hero-pagination-bars" id="hero-pagination">
+              <!-- Bars populated via JavaScript -->
+            </div>
+            <div class="hero-nav-arrows">
+              <button class="hero-arrow-btn" id="hero-prev-btn" title="Previous Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button class="hero-arrow-btn" id="hero-next-btn" title="Next Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INSTANT SEARCH RESULTS CONTAINER
+       ========================================================================== -->
+  <section class="search-results-container container" id="search-results-section">
+    <div class="section-header">
+      <div class="title-with-badge">
+        <h2 class="section-title" id="search-results-title">Search Results</h2>
+      </div>
+      <button class="section-action-btn" onclick="document.getElementById('nav-search-input').value=''; window.UIControllerInstance.handleSearch('');">
+        Clear Search ✕
+      </button>
+    </div>
+    <div class="search-grid" id="search-results-grid"></div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN CONTENT FLOW
+       ========================================================================== -->
+  <main id="main-content-flow">
+
+    <!-- 1. MOST VIEWED CHANNELS (WITH GIANT OUTLINED NUMERALS) -->
+    <section class="content-section" id="top-ranked-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">Most Viewed Channels</h2>
+            <span class="section-counter-badge">Top 10 Live</span>
+          </div>
+          <button class="section-action-btn" onclick="document.getElementById('ranked-channels-track').scrollBy({left: 600, behavior:'smooth'})">
+            Explore All →
+          </button>
+        </div>
+
+        <div class="carousel-track-wrapper">
+          <button class="carousel-nav-btn prev" data-target="ranked-channels-track" title="Previous">‹</button>
+          <div class="ranked-channels-track" id="ranked-channels-track">
+            <!-- Populated via UI Controller with Giant Outlined Numerals 1..10 -->
+          </div>
+          <button class="carousel-nav-btn next" data-target="ranked-channels-track" title="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. FAVORITES WATCHLIST (DYNAMIC & PINNED UNDER MOST VIEWED) -->
+    <section class="content-section" id="favorites-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">Favorite Channels</h2>
+            <span class="section-counter-badge" id="favorites-counter-badge">★ Watchlist</span>
+          </div>
+          <button class="section-action-btn" onclick="document.getElementById('favorites-track').scrollBy({left: 600, behavior:'smooth'})">
+            Explore All →
+          </button>
+        </div>
+
+        <div class="carousel-track-wrapper">
+          <button class="carousel-nav-btn prev" data-target="favorites-track" title="Previous">‹</button>
+          <div class="carousel-track" id="favorites-track"></div>
+          <button class="carousel-nav-btn next" data-target="favorites-track" title="Next">›</button>
+        </div>
+
+        <!-- Favorites Empty State -->
+        <div class="favorites-empty-state" id="favorites-empty-state" style="display: none;">
+          <div class="fav-empty-card">
+            <span class="fav-empty-icon">★</span>
+            <h4 class="fav-empty-title">Your Watchlist is Ready</h4>
+            <p class="fav-empty-desc">Click the star icon (☆) on any channel card to pin your favorite channels right here for instant access.</p>
+            <button class="btn-primary-play" onclick="document.getElementById('sky-channels-section').scrollIntoView({behavior:'smooth'})" style="padding: 0.45rem 1.15rem; font-size: 0.82rem;">
+              <span>Browse Channels ↓</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. UK FREEVIEW & TERRESTRIAL (DRAGGABLE & REORDERABLE) -->
+    <section class="content-section" id="freeview-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">UK Freeview</h2>
+            <span class="section-counter-badge" id="freeview-channels-counter">13 Channels</span>
+            <span class="freeview-drag-hint" title="You can drag and rearrange channel cards in this section">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="8" cy="6" r="2.2"/><circle cx="16" cy="6" r="2.2"/><circle cx="8" cy="12" r="2.2"/><circle cx="16" cy="12" r="2.2"/><circle cx="8" cy="18" r="2.2"/><circle cx="16" cy="18" r="2.2"/></svg>
+              Drag Cards to Rearrange
+            </span>
+          </div>
+
+          <div class="section-header-actions">
+            <button class="section-action-btn freeview-reset-btn" id="freeview-reset-order-btn" title="Reset to default Freeview order (BBC 1, ITV1, Channel 4, Channel 5...)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              <span>Reset Order</span>
+            </button>
+            <button class="section-action-btn" onclick="document.getElementById('freeview-track').scrollBy({left: 600, behavior:'smooth'})">
+              Explore All →
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-track-wrapper">
+          <button class="carousel-nav-btn prev" data-target="freeview-track" title="Previous">‹</button>
+          <div class="carousel-track freeview-drag-track" id="freeview-track">
+            <!-- Populated via UI Controller with draggable channel cards -->
+          </div>
+          <button class="carousel-nav-btn next" data-target="freeview-track" title="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- US TV CHANNEL DIRECTORY -->
+    <section class="content-section" id="us-tv-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">US TV</h2>
+            <span class="section-counter-badge" id="us-tv-channel-count" aria-live="polite" aria-atomic="true">40 Channels</span>
+          </div>
+          <label class="us-tv-search">
+            <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input id="us-tv-search-input" type="search" aria-label="Search US TV channels" placeholder="Search US channels..." autocomplete="off">
+          </label>
+        </div>
+        <p class="us-tv-note">Channel directory only. Playback is not configured for these channels.</p>
+        <div class="us-tv-rails" id="us-tv-rails"></div>
+        <p class="us-tv-empty" id="us-tv-empty" hidden>No US channels match your search.</p>
+      </div>
+    </section>
+
+    <!-- 4. SKY CHANNELS (EXCLUSIVE HUB) -->
+    <section class="content-section" id="sky-channels-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">Sky Channels</h2>
+            <span class="section-counter-badge" id="sky-channels-counter">30 Channels</span>
+          </div>
+
+          <div class="section-header-actions">
+            <div class="section-subpills" id="sky-subpills">
+              <button class="subpill-btn active" data-sky-filter="all">All Sky</button>
+              <button class="subpill-btn" data-sky-filter="Cinema">Sky Cinema</button>
+              <button class="subpill-btn" data-sky-filter="Entertainment">Sky Atlantic & Drama</button>
+            </div>
+            <button class="section-action-btn" onclick="document.getElementById('sky-channels-track').scrollBy({left: 600, behavior:'smooth'})">
+              Explore All →
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-track-wrapper">
+          <button class="carousel-nav-btn prev" data-target="sky-channels-track" title="Previous">‹</button>
+          <div class="carousel-track" id="sky-channels-track">
+            <!-- Populated via UI Controller -->
+          </div>
+          <button class="carousel-nav-btn next" data-target="sky-channels-track" title="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 24/7 LIVE NEWS & GLOBAL WIRE -->
+    <section class="content-section" id="news-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">24/7 Live News & Global Wire</h2>
+            <span class="section-counter-badge" id="news-channels-counter">15 Channels</span>
+          </div>
+
+          <button class="section-action-btn" onclick="document.getElementById('news-track').scrollBy({left: 600, behavior:'smooth'})">
+            Explore All →
+          </button>
+        </div>
+
+        <div class="carousel-track-wrapper">
+          <button class="carousel-nav-btn prev" data-target="news-track" title="Previous">‹</button>
+          <div class="carousel-track" id="news-track">
+            <!-- Populated via UI Controller -->
+          </div>
+          <button class="carousel-nav-btn next" data-target="news-track" title="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SKY CINEMA & BLOCKBUSTERS -->
+    <section class="content-section" id="cinema-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">Sky Cinema & Movie Premieres</h2>
+            <span class="section-counter-badge">11 Channels</span>
+          </div>
+          <button class="section-action-btn" onclick="document.getElementById('cinema-track').scrollBy({left: 600, behavior:'smooth'})">
+            Explore All →
+          </button>
+        </div>
+
+        <div class="carousel-track-wrapper">
+          <button class="carousel-nav-btn prev" data-target="cinema-track" title="Previous">‹</button>
+          <div class="carousel-track" id="cinema-track">
+            <!-- Populated via UI Controller -->
+          </div>
+          <button class="carousel-nav-btn next" data-target="cinema-track" title="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. UK FREEVIEW & ENTERTAINMENT -->
+    <section class="content-section" id="entertainment-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-badge">
+            <h2 class="section-title">UK Entertainment & Freeview</h2>
+            <span class="section-counter-badge">16 Channels</span>
+          </div>
+          <button class="section-action-btn" onclick="document.getElementById('entertainment-track').scrollBy({left: 600, behavior:'smooth'})">
+            Explore All →
+          </button>
+        </div>
+
+        <div class="carousel-track-wrapper">
+          <button class="carousel-nav-btn prev" data-target="entertainment-track" title="Previous">‹</button>
+          <div class="carousel-track" id="entertainment-track">
+            <!-- Populated via UI Controller -->
+          </div>
+          <button class="carousel-nav-btn next" data-target="entertainment-track" title="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="app-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#" class="brand-logo footer-brand-logo" title="IVTV — Home">
+          <img src="assets/images/ivtv-logo.png?v=57" alt="IVTV" class="brand-logo-image" />
+        </a>
+
+        <ul class="footer-nav">
+          <li><a href="#hero-section" class="footer-link">Home</a></li>
+          <li><a href="#" id="footer-tv-guide-link" class="footer-link" onclick="event.preventDefault(); window.UIControllerInstance.openTVGuide();">TV Guide</a></li>
+          <li><a href="#top-ranked-section" class="footer-link">Most Viewed</a></li>
+          <li><a href="#entertainment-section" class="footer-link">Entertainment</a></li>
+          <li><a href="#cinema-section" class="footer-link">Cinema</a></li>
+          <li><a href="#news-section" class="footer-link">News</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-disclaimer">
+        <span>© 2026 IVTV. Pure ad-free cinematic live television player. All channels broadcast in HD.</span>
+        <span>Keyboard: Press <kbd style="background:rgba(255,255,255,0.1);padding:0.1rem 0.35rem;border-radius:4px;">/</kbd> to search, <kbd style="background:rgba(255,255,255,0.1);padding:0.1rem 0.35rem;border-radius:4px;">Esc</kbd> to close player</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CINEMA THEATER MODAL (LIVE VIDEO PLAYER)
+       ========================================================================== -->
+  <div class="theater-modal-overlay" id="theater-modal">
+    <div class="theater-modal-container" id="theater-modal-container">
+      
+      <!-- Theater Header (Sleek & Compact) -->
+      <div class="theater-header">
+        <div class="theater-title-group">
+          <h3 class="theater-channel-name" id="theater-channel-title">Sky Cinema Premiere</h3>
+          <div class="theater-status-badges">
+            <span class="theater-live-pill"><span class="live-pulse-dot" style="width:6px;height:6px;"></span> LIVE</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <button class="theater-close-btn" id="theater-close-btn" title="Close Player (Esc)" aria-label="Close Player">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- In-Player Side TV Guide Drawer (Pop from Left, Covers Half Viewport, Translucent Acrylic) -->
+      <aside class="theater-side-guide-drawer" id="theater-side-guide" aria-label="In-Player Live TV Guide">
+        <!-- Side Guide Header -->
+        <div class="side-guide-header">
+          <div class="side-guide-title-row">
+            <div class="side-guide-title-group">
+              <span class="live-pulse-dot" style="width: 7px; height: 7px;"></span>
+              <h3 class="side-guide-title">Live TV Guide</h3>
+              <span class="side-guide-badge" id="side-guide-counter">45 Guides</span>
+            </div>
+            <div class="side-guide-header-actions">
+              <div class="side-guide-clock" id="side-guide-clock">--:--:--</div>
+              <button class="theater-close-btn side-guide-close-btn" id="theater-side-guide-close-btn" title="Close TV Guide (Esc or G)" aria-label="Close TV Guide">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Search Bar -->
+          <div class="side-guide-search-row">
+            <div class="side-guide-search-box">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="side-guide-search-input" class="side-guide-search-input" placeholder="Search channels or shows..." autocomplete="off">
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="side-guide-categories" id="side-guide-categories">
+            <button class="side-guide-cat-btn active" data-category="all">All</button>
+            <button class="side-guide-cat-btn" data-category="Sports">🏆 Sports</button>
+            <button class="side-guide-cat-btn" data-category="Cinema">🍿 Cinema</button>
+            <button class="side-guide-cat-btn" data-category="Entertainment">🎬 Entertainment</button>
+            <button class="side-guide-cat-btn" data-category="News">📡 News</button>
+            <button class="side-guide-cat-btn" data-category="Favorites">★ Favorites</button>
+          </div>
+        </div>
+
+        <!-- Scrollable Listings Area -->
+        <div class="side-guide-list-wrap" id="side-guide-list-wrap">
+          <div class="side-guide-channel-list" id="theater-side-guide-list">
+            <!-- Dynamically populated via player.js -->
+          </div>
+        </div>
+      </aside>
+
+      <!-- Video Screen Area with Flex Expansion -->
+      <div class="theater-screen-area" id="theater-screen-area">
+        <div class="theater-loader-overlay" id="theater-loader">
+          <div class="theater-spinner"></div>
+          <span class="theater-loading-text">Connecting to ad-free HD broadcast...</span>
+        </div>
+        
+        <!-- Interactive Unmute Overlay if Browser Mutes Autoplay -->
+        <button class="theater-unmute-overlay hidden" id="theater-unmute-badge" title="Click to Enable Sound">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+          </svg>
+          <span>Sound Muted — Click to Unmute</span>
+        </button>
+
+        <!-- Stream Recovery & Offline Overlay -->
+        <div class="theater-error-overlay hidden" id="theater-error-overlay">
+          <div class="theater-error-card">
+            <div id="theater-error-icon" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:rgba(0,240,118,0.1);border:1px solid rgba(0,240,118,0.3);color:var(--accent-emerald);margin-bottom:0.75rem;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+                <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+                <circle cx="12" cy="12" r="2"/>
+                <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+                <path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/>
+              </svg>
+            </div>
+            <h4 id="theater-error-title" style="font-size: 1.15rem; color: #ffffff; margin: 0 0 0.35rem; font-family: var(--font-display); font-weight: 800;">Live Stream Connecting...</h4>
+            <p id="theater-error-desc" style="font-size: 0.85rem; color: var(--text-secondary); max-width: 380px; margin: 0 auto 1.25rem; line-height: 1.45;">
+              If direct HD playback is slow to connect or throttled by your ISP, switch to the Mirror Player for instant broadcast.
+            </p>
+            <div id="theater-error-actions" style="display: flex; gap: 0.65rem; justify-content: center; flex-wrap: wrap;">
+              <button class="theater-action-btn active" id="theater-error-switch-btn" style="padding: 0.45rem 1rem; font-weight: 700;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>Switch to Mirror</span>
+              </button>
+              <button class="theater-action-btn" id="theater-error-retry-btn" style="padding: 0.45rem 0.9rem;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                <span>Retry Direct</span>
+              </button>
+              <button class="theater-action-btn" id="theater-error-guide-btn" style="padding: 0.45rem 0.9rem; display: none;">
+                📅 Open TV Guide
+              </button>
+              <button class="theater-action-btn" id="theater-error-external-btn" style="padding: 0.45rem 0.9rem;">
+                ↗ Broadcaster Feed
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modern Volume HUD Indicator (Centered overlay, guaranteed no clipping) -->
+        <div class="theater-volume-hud hidden" id="theater-volume-hud" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
+          <span id="theater-volume-hud-icon" style="display: inline-flex; align-items: center; justify-content: center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          </span>
+          <div class="theater-volume-hud-track">
+            <div class="theater-volume-hud-fill" id="theater-volume-hud-fill" style="width: 85%;"></div>
+          </div>
+          <span id="theater-volume-hud-text">85%</span>
+        </div>
+
+        <video id="theater-video" class="theater-video aspect-stretch" autoplay playsinline></video>
+        <iframe 
+          id="theater-youtube-iframe" 
+          class="theater-iframe" 
+          style="display: none;"
+          src="" 
+          allowfullscreen="true" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" 
+          scrolling="no" 
+          frameborder="0">
+        </iframe>
+
+        <!-- Broadcast Channel OSD HUD (Appears for 2.5s on channel switch) -->
+        <div class="theater-channel-osd hidden" id="theater-channel-osd">
+          <div class="osd-content">
+            <div class="osd-logo-wrap" id="osd-logo-wrap">
+              <img id="osd-channel-logo" class="osd-channel-logo" src="" alt="Channel Logo">
+            </div>
+            <div class="osd-info">
+              <div class="osd-top-row">
+                <span class="osd-channel-num" id="osd-channel-num">CH 01</span>
+                <span class="osd-channel-name" id="osd-channel-name">Channel Name</span>
+                <span class="osd-live-badge"><span class="live-pulse-dot" style="width:6px;height:6px;"></span> LIVE</span>
+              </div>
+              <div class="osd-meta-row">
+                <span class="osd-category" id="osd-category">Cinema</span>
+                <span class="osd-sep">•</span>
+                <span class="osd-quality" id="osd-quality">1080p HD Direct</span>
+              </div>
+              <div class="osd-now-playing">
+                <span class="osd-now-label">NOW PLAYING:</span>
+                <span class="osd-program-title" id="osd-program-title">Broadcast Programme</span>
+                <span class="osd-program-time" id="osd-program-time">19:00 - 21:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Theater Bottom Overlay (Overlays Video with Gradient Top & Transparency) -->
+      <div class="theater-bottom-overlay" id="theater-bottom-overlay">
+        <!-- In-Player Now & Next Ticker -->
+        <div class="theater-epg-ticker" id="theater-epg-ticker">
+          <div class="theater-now-playing">
+            <span class="theater-now-label">NOW</span>
+            <span class="theater-now-title" id="theater-ticker-title">Sky Live Broadcast</span>
+            <div class="theater-now-progress-wrap" title="Program progress">
+              <div class="theater-now-progress-bar" id="theater-ticker-progress" style="width: 50%;"></div>
+            </div>
+            <span style="font-size: 0.72rem; color: var(--text-muted);" id="theater-ticker-time">19:00 - 21:00</span>
+          </div>
+          <div class="theater-next-playing">
+            <span style="color: var(--accent-emerald); font-weight: 700;">UP NEXT:</span>
+            <span id="theater-ticker-next">Upcoming Programme</span>
+          </div>
+          <span class="theater-viewers-count" id="theater-viewers-count" aria-label="Current viewers">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z"/>
+              <circle cx="12" cy="12" r="2.5"/>
+            </svg>
+            <span>420K viewers</span>
+          </span>
+        </div>
+
+        <!-- Theater Action Bar (Clean, Minimalist & Balanced) -->
+        <div class="theater-controls-bar" id="theater-controls-bar">
+          <div class="theater-controls-left">
+            <!-- Play / Pause Toggle Button -->
+            <button class="theater-action-btn play-pause-btn" id="theater-play-pause-btn" title="Pause Live Stream (Space or K)">
+              <span id="theater-play-pause-icon" style="display:inline-flex;align-items:center;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="6" y="4" width="4" height="16" rx="1"/>
+                  <rect x="14" y="4" width="4" height="16" rx="1"/>
+                </svg>
+              </span>
+              <span id="theater-play-pause-label">Pause</span>
+            </button>
+
+            <!-- Quick Channel Zapper (Prev / Prominent Next) -->
+            <div class="theater-zap-group" title="Quick Channel Switch (Up/Down Arrow keys or [ / ])">
+              <button class="theater-action-btn zap-btn zap-prev" id="theater-prev-ch-btn" title="Previous Channel (PageUp or [)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                <span>Prev</span>
+              </button>
+              <button class="theater-action-btn zap-btn zap-next prominent-next-btn" id="theater-next-ch-btn" title="Next Channel (PageDown or ])">
+                <span>Next</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+
+            <!-- Volume & Mute Controls -->
+            <div class="theater-vol-wrapper">
+              <button class="theater-vol-btn" id="theater-volume-btn" title="Toggle Mute (M)">
+                <span id="theater-vol-icon" style="display:inline-flex;align-items:center;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                </span>
+              </button>
+              <input type="range" id="theater-volume-slider" class="theater-vol-slider" min="0" max="1" step="0.05" value="1" title="Volume">
+            </div>
+
+            <!-- Pop-from-Left TV Guide Toggle Button -->
+            <button class="theater-action-btn side-guide-trigger-btn" id="theater-guide-toggle-btn" title="Toggle Live TV Guide (Press G)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span class="theater-btn-text">TV Guide</span>
+              <kbd class="theater-kbd-pill">G</kbd>
+            </button>
+
+            <!-- Toggle Channels Drawer Button (Minimalist with Count Badge) -->
+            <button class="theater-action-btn active" id="theater-surf-toggle-btn" title="Toggle Channel Surf Drawer (C)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/>
+                <polyline points="17 2 12 7 7 2"/>
+              </svg>
+              <span class="theater-btn-text">Channels</span>
+              <span class="theater-badge-count" id="theater-surf-btn-label">70</span>
+            </button>
+
+            <!-- Engine Switcher Button (Direct HD vs Mirror Player) -->
+            <button class="theater-action-btn engine-toggle-btn" id="theater-engine-btn" title="Switch between Direct HD and Mirror Player">
+              <span id="theater-engine-icon" style="display:inline-flex;align-items:center;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </span>
+              <span id="theater-engine-label">Direct HD</span>
+            </button>
+          </div>
+
+          <div class="theater-controls-right">
+            <!-- Reload stream button -->
+            <button class="theater-action-btn icon-only-btn" id="theater-reload-btn" title="Reload stream (R)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </button>
+
+            <!-- Aspect Ratio Toggle -->
+            <button class="theater-action-btn" id="theater-aspect-btn" title="Aspect Ratio: Stretch / 16:9 / Zoom (A)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="8" x2="22" y2="8"/></svg>
+              <span id="theater-aspect-label">Stretch</span>
+            </button>
+
+            <!-- Pop-out Options Dropdown (PiP + New Window + VPN Tip) -->
+            <div class="theater-popmenu-wrapper" id="theater-popmenu-wrapper">
+              <button class="theater-action-btn popmenu-trigger-btn popout-tooltip-action" id="theater-popmenu-trigger" aria-label="Pop-out options" aria-haspopup="true" aria-expanded="false">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                <span class="theater-control-tooltip" aria-hidden="true">Pop-out</span>
+              </button>
+              <div class="theater-popmenu-dropdown" id="theater-popmenu-dropdown">
+                <button class="theater-popmenu-item" id="theater-pip-btn" title="Picture-in-Picture Floating Player (P)">
+                  <span class="popmenu-item-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2"/>
+                      <rect x="12" y="9" width="8" height="6" rx="1"/>
+                    </svg>
+                  </span>
+                  <span class="popmenu-item-text">
+                    <span class="popmenu-item-title">Picture-in-Picture</span>
+                    <span class="popmenu-item-desc">Floating mini player (P)</span>
+                  </span>
+                </button>
+                <button class="theater-popmenu-item" id="theater-popout-btn" title="Open stream in detached window">
+                  <span class="popmenu-item-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </span>
+                  <span class="popmenu-item-text">
+                    <span class="popmenu-item-title">Pop-out Window</span>
+                    <span class="popmenu-item-desc">Detached standalone player</span>
+                  </span>
+                </button>
+                <div class="theater-popmenu-divider"></div>
+                <div class="theater-popmenu-tip" title="Streaming advisory: If stream shows connection error, connect to a UK/European VPN server for seamless playback">
+                  <span class="popmenu-tip-badge">VPN TIP</span>
+                  <span class="popmenu-tip-text">Connect to UK VPN if stream is throttled</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fullscreen button -->
+            <button class="theater-action-btn fullscreen-tooltip-action" id="theater-fs-btn" aria-label="Fullscreen">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              <span class="theater-control-tooltip" aria-hidden="true">Fullscreen</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- In-Player Channel Surfing Drawer (Quick Channel Surf Carousel) -->
+        <div class="theater-channel-surf-section" id="theater-surf-drawer">
+          <div class="surf-header">
+            <div class="surf-header-left">
+              <span class="surf-title">Quick Channel Surf</span>
+              <div class="surf-category-pills" id="theater-surf-cats">
+                <button class="surf-cat-pill active" data-category="all">All</button>
+                <button class="surf-cat-pill" data-category="most-viewed">🔥 Most Viewed</button>
+                <button class="surf-cat-pill" data-category="freeview">🇬🇧 Freeview</button>
+                <button class="surf-cat-pill" data-category="Cinema">Cinema</button>
+                <button class="surf-cat-pill" data-category="Entertainment">Entertainment</button>
+                <button class="surf-cat-pill" data-category="News">News</button>
+                <button class="surf-cat-pill" data-category="Favorites">★ Favorites</button>
+                <button class="surf-cat-pill" data-category="Sports">🏆 Sports</button>
+              </div>
+            </div>
+            <div class="surf-header-right">
+              <div class="surf-search-wrap">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="theater-surf-search" class="surf-search-input" placeholder="Search channels..." autocomplete="off">
+              </div>
+              <button class="theater-action-btn" id="theater-surf-close-btn" style="padding: 0.2rem 0.55rem; font-size: 0.72rem;">Hide ▲</button>
+            </div>
+          </div>
+          <div class="surf-carousel-wrapper">
+            <button class="surf-nav-btn prev" id="theater-surf-prev-btn" title="Scroll Left (‹)">‹</button>
+            <div class="surf-channel-list" id="theater-surf-list">
+              <!-- Populated dynamically via player.js -->
+            </div>
+            <button class="surf-nav-btn next" id="theater-surf-next-btn" title="Scroll Right (›)">›</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DEDICATED FULL TV GUIDE MODAL (ON-DEMAND REAL-TIME LISTINGS OVERLAY)
+       ========================================================================== -->
+  <div class="tv-guide-modal-overlay" id="tv-guide-modal">
+    <div class="tv-guide-modal-container" id="tv-guide-modal-container">
+      
+      <!-- TV Guide Modal Header -->
+      <div class="tv-guide-modal-header">
+        <div class="tv-guide-modal-title-group">
+          <img src="assets/images/ivtv-mark.png?v=51" alt="IVTV" style="width: 28px; height: 28px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(0,255,136,0.5));" />
+          <div>
+            <h2 class="tv-guide-modal-title">Live TV Guide & Listings</h2>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Real-time broadcast schedule for 45 UK & Sky channels</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div class="epg-live-clock" id="epg-clock">
+            <span class="live-pulse-dot" style="width:7px;height:7px;"></span>
+            <span id="epg-clock-digits">--:--:--</span>
+            <span class="epg-clock-badge">LIVE UK</span>
+          </div>
+          <button class="theater-action-btn" id="epg-sync-btn" title="Sync live TV guide with latest Freeview & Sky listings" style="padding: 0.35rem 0.8rem; font-size: 0.78rem; display: flex; align-items: center; gap: 0.4rem; border-radius: 9999px;">
+            <svg id="epg-sync-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+            </svg>
+            <span id="epg-sync-text">Sync Guide</span>
+          </button>
+          <button class="theater-close-btn" id="tv-guide-modal-close-btn" title="Close TV Guide (Esc)">✕</button>
+        </div>
+      </div>
+
+      <!-- EPG Filter Bar -->
+      <div class="epg-top-bar">
+        <div class="epg-category-filters" id="epg-category-filters">
+          <button class="epg-filter-btn active" data-category="all">All (45 Channels)</button>
+          <button class="epg-filter-btn" data-category="Sports">🏆 Sports (14)</button>
+          <button class="epg-filter-btn" data-category="Cinema">🍿 Cinema (11)</button>
+          <button class="epg-filter-btn" data-category="Entertainment">🎬 Entertainment (16)</button>
+          <button class="epg-filter-btn" data-category="News">📡 News (4)</button>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.65rem;">
+          <span style="display:inline-block; width:8px; height:8px; background:#ff5252; border-radius:50%; box-shadow:0 0 6px #ff5252;"></span>
+          <span>Red marker indicates real-time broadcast</span>
+        </div>
+      </div>
+
+      <!-- Scrollable Grid Timeline -->
+      <div class="epg-scroll-window" id="epg-scroll-window">
+        <div class="epg-grid-layout" id="epg-grid-layout">
+          <!-- Dynamically populated via ui.js -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EPG Program Details Popup Modal -->
+  <div class="epg-modal-overlay" id="epg-details-modal">
+    <div class="epg-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+        <div>
+          <span class="epg-program-badge live-tag" id="epg-modal-tag">LIVE</span>
+          <h3 class="epg-modal-title" id="epg-modal-title" style="margin-top: 0.5rem; font-size: 1.35rem;">Program Title</h3>
+        </div>
+        <button class="theater-close-btn" id="epg-modal-close-btn" title="Close" aria-label="Close">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="epg-modal-time-meta">
+        <span id="epg-modal-channel" style="color: #ffffff; font-weight: 700;">Channel</span>
+        <span>•</span>
+        <span id="epg-modal-time">19:00 - 20:30</span>
+      </div>
+      <p class="epg-modal-desc" id="epg-modal-desc">Program description goes here...</p>
+      <div class="epg-modal-actions">
+        <button class="btn-secondary-glass" id="epg-modal-dismiss-btn" style="padding: 0.5rem 1rem;">Close</button>
+        <button class="btn-primary-play" id="epg-modal-watch-btn" style="padding: 0.5rem 1.25rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span id="epg-modal-action-text">Watch Live</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js?v=62"></script>
+  <script src="js/favorites.js?v=41"></script>
+  <script src="js/epg.js?v=40"></script>
+  <script src="js/player.js?v=50"></script>
+  <script src="js/us-channels.js?v=4"></script>
+  <script src="js/ui.js?v=66"></script>
+  <script src="js/app.js?v=76"></script>
+</body>
+</html>

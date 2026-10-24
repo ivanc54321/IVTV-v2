@@ -1,0 +1,316 @@
+{
+  "channels": [
+    {
+      "id": "sky-history-uk",
+      "name": "Sky History UK",
+      "category": "Entertainment",
+      "iframeUrl": "https://freeshot.live/embed/SkyHistoryUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyHistoryUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "270K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-history-uk/753",
+      "viewsNum": 270000
+    },
+    {
+      "id": "sky-crime-uk",
+      "name": "Sky Crime UK",
+      "category": "Entertainment",
+      "iframeUrl": "https://freeshot.live/embed/SkyCrimeUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCrimeUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "260K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-crime-uk/752",
+      "viewsNum": 260000
+    },
+    {
+      "id": "sky-comedy-uk",
+      "name": "Sky Comedy UK",
+      "category": "Entertainment",
+      "iframeUrl": "https://freeshot.live/embed/SkyComedyUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyComedyUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "340K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-comedy-uk/751",
+      "viewsNum": 340000
+    },
+    {
+      "id": "sky-arts-uk",
+      "name": "Sky Arts UK",
+      "category": "Entertainment",
+      "iframeUrl": "https://freeshot.live/embed/SkyArtsUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyArtsUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "210K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-arts-uk/750",
+      "viewsNum": 210000
+    },
+    {
+      "id": "sky-showcase",
+      "name": "Sky Showcase",
+      "category": "Entertainment",
+      "iframeUrl": "https://freeshot.live/embed/SkyShowcase.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyShowcase.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "240K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-showcase/749",
+      "viewsNum": 240000
+    },
+    {
+      "id": "sky-atlantic-uk",
+      "name": "Sky Atlantic UK",
+      "category": "Entertainment",
+      "iframeUrl": "https://freeshot.live/embed/SkyAtlanticUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyAtlanticUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "845K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-atlantic-uk/37",
+      "viewsNum": 845000
+    },
+    {
+      "id": "sky-cinema-sci-fi-horror-uk",
+      "name": "Sky Cinema Sci-Fi Horror",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaSci-FiHorrorUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaSci-FiHorrorUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "175K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-sci-fi-horror-uk/748",
+      "viewsNum": 175000
+    },
+    {
+      "id": "sky-cinema-drama-uk",
+      "name": "Sky Cinema Drama",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaDramaUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaDramaUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "205K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-drama-uk/747",
+      "viewsNum": 205000
+    },
+    {
+      "id": "sky-cinema-thriller-uk",
+      "name": "Sky Cinema Thriller",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaThrillerUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaThrillerUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "220K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-thriller-uk/746",
+      "viewsNum": 220000
+    },
+    {
+      "id": "sky-cinema-comedy-uk",
+      "name": "Sky Cinema Comedy",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaComedyUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaComedyUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "140K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-comedy-uk/745",
+      "viewsNum": 140000
+    },
+    {
+      "id": "sky-cinema-action-uk",
+      "name": "Sky Cinema Action",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaActionUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaActionUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "360K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-action-uk/744",
+      "viewsNum": 360000
+    },
+    {
+      "id": "sky-cinema-family-uk",
+      "name": "Sky Cinema Family",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaFamilyUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaFamilyUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "160K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-family-uk/743",
+      "viewsNum": 160000
+    },
+    {
+      "id": "sky-cinema-hits-uk",
+      "name": "Sky Cinema Hits",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaHitsUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaHitsUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "480K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-hits-uk/738",
+      "viewsNum": 480000
+    },
+    {
+      "id": "sky-cinema-greats-uk",
+      "name": "Sky Cinema Greats",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaGreatsUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaGreatsUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "230K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-greats-uk/737",
+      "viewsNum": 230000
+    },
+    {
+      "id": "sky-cinema-select-uk",
+      "name": "Sky Cinema Select",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaSelectUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaSelectUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "190K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-select-uk/736",
+      "viewsNum": 190000
+    },
+    {
+      "id": "sky-cinema-premiere-uk",
+      "name": "Sky Cinema Premiere",
+      "category": "Cinema",
+      "iframeUrl": "https://freeshot.live/embed/SkyCinemaPremiereUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyCinemaPremiereUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "590K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-cinema-premiere-uk/735",
+      "viewsNum": 590000
+    },
+    {
+      "id": "sky-sports-racing-uk",
+      "name": "Sky Sports Racing",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsRacing.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsRacing.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "430K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-racing-uk/135",
+      "viewsNum": 430000
+    },
+    {
+      "id": "sky-sports-laliga-uk",
+      "name": "Sky Sports LaLiga",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsLaLigaUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsLaLigaUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "35K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-laliga-uk/24",
+      "viewsNum": 35000
+    },
+    {
+      "id": "sky-sports-mix-uk",
+      "name": "Sky Sports Mix",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportMix.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportMix.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "295K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-mix-uk/23",
+      "viewsNum": 295000
+    },
+    {
+      "id": "sky-sports-plus-uk",
+      "name": "Sky Sports Plus",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsPlus.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsPlus.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "145K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-plus-uk/22",
+      "viewsNum": 145000
+    },
+    {
+      "id": "sky-sports-action-uk",
+      "name": "Sky Sports Action",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportAction.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportAction.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "620K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-action-uk/21",
+      "viewsNum": 620000
+    },
+    {
+      "id": "sky-sports-cricket-uk",
+      "name": "Sky Sports Cricket",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsCricket.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsCricket.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "510K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-cricket-uk/20",
+      "viewsNum": 510000
+    },
+    {
+      "id": "sky-sports-golf-uk",
+      "name": "Sky Sports Golf",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportGolf.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportGolf.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "440K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-golf-uk/19",
+      "viewsNum": 440000
+    },
+    {
+      "id": "sky-sports-f1-uk",
+      "name": "Sky Sports F1",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportF1.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportF1.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "1.05M",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-f1-uk/18",
+      "viewsNum": 1050000
+    },
+    {
+      "id": "sky-sports-premier-league-uk",
+      "name": "Sky Sports Premier League",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsPremierLeague.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsPremierLeague.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "1.48M",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-premier-league-uk/17",
+      "viewsNum": 1480000
+    },
+    {
+      "id": "sky-sports-news-uk",
+      "name": "Sky Sports News",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsNews.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsNews.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "325K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-news-uk/16",
+      "viewsNum": 325000
+    },
+    {
+      "id": "sky-sports-main-event-live-uk",
+      "name": "Sky Sports Main Event",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsMainEvent.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsMainEvent.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "1.18M",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-main-event-live-uk/15",
+      "viewsNum": 1180000
+    },
+    {
+      "id": "sky-sports-football-uk",
+      "name": "Sky Sports Football",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsFootball.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsFootball.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "680K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-football-uk/14",
+      "viewsNum": 680000
+    },
+    {
+      "id": "sky-sports-tennis-uk",
+      "name": "Sky Sports Tennis",
+      "category": "Sports",
+      "iframeUrl": "https://freeshot.live/embed/SkySportsTennisUK.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkySportsTennisUK.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "460K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-sports-tennis-uk/389",
+      "viewsNum": 460000
+    },
+    {
+      "id": "sky-news",
+      "name": "Sky News",
+      "category": "News",
+      "iframeUrl": "https://freeshot.live/embed/SkyNews.php",
+      "iframeCode": "<iframe src=\"https://freeshot.live/embed/SkyNews.php\" width=\"100%\" height=\"100%\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay;\" allowtransparency=\"true\" id=\"thatframe\"> </iframe>",
+      "views": "790K",
+      "sourcePage": "https://www.freeshot.live/live-tv/sky-news/375",
+      "viewsNum": 790000
+    }
+  ],
+  "metadata": {
+    "totalChannels": 27,
+    "categories": {
+      "Entertainment": 6,
+      "Cinema": 10,
+      "Sports": 13,
+      "News": 1
+    },
+    "source": "freeshot.live",
+    "scrapedAt": "2026-10-13",
+    "note": "Streams may require VPN to bypass ISP blocking. All iframe codes use allowfullscreen and allowtransparency attributes for embedding."
+  }
+}

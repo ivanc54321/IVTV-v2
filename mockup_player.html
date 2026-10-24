@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Live Player - Visual Mockup & Design Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070908;
+      --card-bg: rgba(18, 24, 21, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-neon: #00ff88;
+      --accent-emerald: #00f076;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      padding: 2rem 1.5rem 4rem;
+      line-height: 1.5;
+    }
+    h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1.5rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(0, 240, 118, 0.15);
+      border: 1px solid rgba(0, 240, 118, 0.3);
+      color: var(--accent-neon);
+      margin-bottom: 0.75rem;
+    }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-neon); box-shadow: 0 0 8px var(--accent-neon); }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    p.lead { color: var(--text-muted); font-size: 1rem; max-width: 750px; }
+
+    .tabs {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+    .tab-btn.active {
+      background: rgba(0, 240, 118, 0.15);
+      border-color: var(--accent-emerald);
+      color: #fff;
+    }
+
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .mockup-grid { grid-template-columns: 1fr; }
+    }
+
+    .mockup-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-head {
+      padding: 1rem 1.25rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-title { font-size: 1rem; font-weight: 600; }
+    .card-tag { font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700; }
+    .tag-current { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .tag-proposed { background: rgba(0, 240, 118, 0.2); color: var(--accent-neon); border: 1px solid rgba(0, 240, 118, 0.4); }
+
+    /* Mockup Screen Viewport */
+    .screen-preview {
+      position: relative;
+      height: 380px;
+      background: #000 url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    /* Screen Header */
+    .screen-header {
+      padding: 0.8rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, transparent 100%);
+      z-index: 10;
+    }
+    .ch-title { font-size: 0.95rem; font-weight: 700; color: #fff; }
+    .header-btns { display: flex; gap: 0.4rem; align-items: center; }
+    .mini-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      backdrop-filter: blur(8px);
+    }
+    .mini-btn.highlight {
+      border-color: #ef4444;
+      background: rgba(239, 68, 68, 0.2);
+    }
+
+    /* Current Bottom Section */
+    .bottom-current {
+      position: relative;
+      background: linear-gradient(to top, rgba(4,7,6,0.98) 0%, rgba(4,7,6,0.8) 50%, transparent 100%);
+      padding: 1rem 1rem 0.6rem;
+    }
+    .current-surf-box {
+      background: rgba(8, 12, 10, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.6rem 0.8rem;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      color: #aaa;
+    }
+
+    /* Proposed Bottom Section */
+    .bottom-proposed {
+      position: relative;
+      background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.95) 0%, 
+        rgba(3, 8, 6, 0.85) 45%, 
+        rgba(3, 8, 6, 0.5) 75%, 
+        rgba(3, 8, 6, 0.15) 90%, 
+        transparent 100%
+      );
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1.5rem 1rem 0.6rem;
+    }
+    .proposed-surf-box {
+      background: rgba(12, 18, 15, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 0.6rem 0.8rem;
+      margin-top: 0.6rem;
+      backdrop-filter: blur(16px);
+      font-size: 0.72rem;
+      color: #ccc;
+    }
+
+    .ticker-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .controls-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ctrl-group { display: flex; gap: 0.4rem; align-items: center; }
+
+    .popout-demo-card {
+      background: rgba(0, 240, 118, 0.04);
+      border: 1px solid rgba(0, 240, 118, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .btn-test {
+      background: var(--accent-emerald);
+      color: #000;
+      font-weight: 700;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      transition: all 0.2s;
+    }
+    .btn-test:hover { background: var(--accent-neon); transform: translateY(-1px); }
+    .notes-list { margin-left: 1.2rem; color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; }
+    .notes-list li { margin-bottom: 0.4rem; }
+    .highlight-text { color: var(--accent-neon); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge"><span class="dot"></span> Brainstorming Interactive Mockup</div>
+      <h1>Watch Live Theater Refinements</h1>
+      <p class="lead">Compare the current layout against proposed improvements for duplicate controls, bottom gradient smoothness, and the pop-out window behavior.</p>
+    </div>
+
+    <!-- COMPARISON 1: TWO FULLSCREEN BUTTONS & BOTTOM GRADIENT -->
+    <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">1. Layout & Gradient Comparison</h2>
+    <div class="mockup-grid">
+      <!-- CURRENT STATE -->
+      <div class="mockup-card">
+        <div class="card-head">
+          <span class="card-title">Current Layout (Issues Identified)</span>
+          <span class="card-tag tag-current">CURRENT</span>
+        </div>
+        <div class="screen-preview">
+          <!-- Screen Header with Fullscreen 1 -->
+          <div class="screen-header">
+            <div class="ch-title">Sky Cinema Premiere</div>
+            <div class="header-btns">
+              <span class="mini-btn highlight" title="Duplicate Fullscreen Button #1">⛶ Fullscreen #1</span>
+              <span class="mini-btn">✕ Close</span>
+            </div>
+          </div>
+          <!-- Video Screen center -->
+          <div style="flex: 1;"></div>
+          <!-- Screen Bottom with Fullscreen 2 and Stark Drawer -->
+          <div class="bottom-current">
+            <div class="ticker-bar">
+              <span><b>NOW:</b> Gladiator II</span>
+              <span style="color: var(--accent-emerald);">UP NEXT: Dune 2</span>
+            </div>
+            <div class="controls-row">
+              <div class="ctrl-group">
+                <span class="mini-btn" style="background: rgba(0,240,118,0.2);">⏸ Pause</span>
+                <span class="mini-btn">⏮ Prev</span>
+                <span class="mini-btn">⏭ Next</span>
+                <span class="mini-btn">🔊 Vol</span>
+                <span class="mini-btn">📺 Channels (70)</span>
+              </div>
+              <div class="ctrl-group">
+                <span class="mini-btn">↗ Pop-out ▾</span>
+                <span class="mini-btn highlight" title="Duplicate Fullscreen Button #2">⛶ Fullscreen #2</span>
+              </div>
+            </div>
+            <div class="current-surf-box">
+              ⚠️ <b>Harsh Dark Block:</b> Solid opaque drawer creates an abrupt horizontal cut over the movie feed.
+            </div>
+          </div>
+        </div>
+        <div style="padding: 1rem 1.25rem;">
+          <ul class="notes-list">
+            <li><b style="color: #f87171;">Two Fullscreen Buttons:</b> One in the top header and another in the bottom-right control bar.</li>
+            <li><b style="color: #f87171;">Harsh Boundary:</b> Bottom drawer has an opaque solid `#080c0a` background with a 1px border that cuts off the video stream sharply.</li>
+            <li><b style="color: #f87171;">Broken Pop-out:</b> Pop-out menu button triggers missing code.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PROPOSED IMPROVEMENTS -->
+      <div class="mockup-card">
+        <div class="card-head">
+          <span class="card-title">Proposed Cinematic Refinement</span>
+          <span class="card-tag tag-proposed">RECOMMENDED</span>
+        </div>
+        <div class="screen-preview">
+          <!-- Screen Header: Clean, only Close + Live metadata -->
+          <div class="screen-header">
+            <div class="ch-title" style="display: flex; align-items: center; gap: 0.5rem;">
+              <span>Sky Cinema Premiere</span>
+              <span style="font-size: 0.65rem; background: rgba(0,240,118,0.2); color: var(--accent-neon); padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: 700;">LIVE</span>
+            </div>
+            <div class="header-btns">
+              <span class="mini-btn" style="cursor: pointer;">✕ Close (Esc)</span>
+            </div>
+          </div>
+          <div style="flex: 1;"></div>
+          <!-- Screen Bottom: Unified Frosted Vignette -->
+          <div class="bottom-proposed">
+            <div class="ticker-bar">
+              <span><b class="highlight-text">NOW:</b> Gladiator II (19:00 - 21:30)</span>
+              <span style="color: var(--accent-emerald); font-weight: 600;">UP NEXT: Dune Part Two</span>
+            </div>
+            <div class="controls-row">
+              <div class="ctrl-group">
+                <span class="mini-btn" style="background: rgba(0,240,118,0.25); border-color: var(--accent-emerald); color: #fff;">⏸ Pause</span>
+                <span class="mini-btn">⏮ Prev</span>
+                <span class="mini-btn">⏭ Next</span>
+                <span class="mini-btn">🔊 85%</span>
+                <span class="mini-btn">📅 TV Guide</span>
+                <span class="mini-btn" style="border-color: rgba(0,240,118,0.4);">📺 Channels</span>
+              </div>
+              <div class="ctrl-group">
+                <span class="mini-btn">🗗 Pop-out</span>
+                <span class="mini-btn" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25);">⛶ Fullscreen</span>
+              </div>
+            </div>
+            <div class="proposed-surf-box">
+              ✨ <b>Cinematic Frosted Blur:</b> Smooth feathered gradient blends seamlessly into the video with backdrop blur, eliminating harsh seams.
+            </div>
+          </div>
+        </div>
+        <div style="padding: 1rem 1.25rem;">
+          <ul class="notes-list">
+            <li><b class="highlight-text">Single Fullscreen Location:</b> Kept in bottom-right alongside Pop-out and controls (industry standard like YouTube & BBC iPlayer). Top header stays uncluttered.</li>
+            <li><b class="highlight-text">Smooth Obsidian Feathering:</b> Continuous frosted vignette that softens into the video feed with no harsh cuts or muddy banding.</li>
+            <li><b class="highlight-text">Reliable Pop-out Window:</b> Spawns a dedicated standalone mini-player window without browser chrome.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. POPOUT WINDOW BEHAVIOR -->
+    <div class="popout-demo-card">
+      <h3 style="margin-bottom: 0.5rem;">2. Pop-out ("Page Out") Functionality Test</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 800px;">
+        When clicking "Pop-out Window", the player currently fails because <code>openInNewWindow()</code> is missing. 
+        You can test how the popup will open in a clean, compact window:
+      </p>
+      <button class="btn-test" id="test-popout-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Test Detached Pop-out Window (Click Me)
+      </button>
+      <span id="popout-status" style="margin-left: 1rem; font-size: 0.85rem; color: var(--accent-neon); display: none;">Window launched!</span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('test-popout-btn').addEventListener('click', function() {
+      const width = 854;
+      const height = 480;
+      const left = (window.screen.width - width) / 2;
+      const top = (window.screen.height - height) / 2;
+      const features = `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=no,status=no,toolbar=no,menubar=no,location=no`;
+      const popWindow = window.open('about:blank', 'IVTV_Popout_Test', features);
+      if (popWindow) {
+        popWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>IV TV - Pop-out Player</title>
+            <style>
+              body { margin: 0; background: #000; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; height: 100vh; justify-content: center; align-items: center; text-align: center; }
+              .badge { background: #00f076; color: #000; font-weight: 700; padding: 4px 12px; border-radius: 9999px; font-size: 12px; margin-bottom: 12px; }
+              h2 { margin: 0 0 8px; font-size: 20px; }
+              p { color: #888; font-size: 14px; max-width: 400px; margin: 0 0 20px; }
+              .close-btn { background: #222; border: 1px solid #444; color: #fff; padding: 6px 16px; border-radius: 6px; cursor: pointer; }
+              .close-btn:hover { background: #333; }
+            </style>
+          </head>
+          <body>
+            <div class="badge">DETACHED MINI PLAYER</div>
+            <h2>IV TV Standalone Pop-out Window</h2>
+            <p>This demonstrates how the pop-out window opens independently with zero browser clutter.</p>
+            <button class="close-btn" onclick="window.close()">Close Window</button>
+          </body>
+          </html>
+        `);
+        document.getElementById('popout-status').style.display = 'inline';
+      } else {
+        alert('Please allow popups to test the pop-out window feature.');
+      }
+    });
+  </script>
+</body>
+</html>

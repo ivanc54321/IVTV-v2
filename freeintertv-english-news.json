@@ -1,0 +1,154 @@
+{
+  "channels": [
+    {
+      "rank": 1,
+      "id": "cnn-international",
+      "name": "CNN International",
+      "country": "USA",
+      "category": "News",
+      "language": "English",
+      "views": 67014427,
+      "sourcePage": "http://www.freeintertv.com/view/id-200",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image/cnn_intl_big.jpg",
+      "description": "Delivers the latest breaking news and information on the latest top stories, weather, business, entertainment, politics, and more."
+    },
+    {
+      "rank": 2,
+      "id": "bbc-news",
+      "name": "BBC News",
+      "country": "United Kingdom",
+      "category": "News",
+      "language": "English",
+      "views": 18413133,
+      "sourcePage": "http://www.freeintertv.com/view/id-2328",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/bbc_news_uk.jpg",
+      "description": "News channel from the UK."
+    },
+    {
+      "rank": 3,
+      "id": "cnn-live-news",
+      "name": "CNN Live News",
+      "country": "USA",
+      "category": "News",
+      "language": "English",
+      "views": 16746293,
+      "sourcePage": "http://www.freeintertv.com/view/id-3324",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/cnnspecial.jpg",
+      "description": "Live coverage events from CNN."
+    },
+    {
+      "rank": 4,
+      "id": "russia-today",
+      "name": "Russia Today (RT)",
+      "country": "Russian Federation",
+      "category": "News",
+      "language": "English",
+      "views": 15225930,
+      "sourcePage": "http://www.freeintertv.com/view/id-1511",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image/russiatoday.jpg",
+      "description": "Russia Today is the first 24/7 English-language news channel to present the Russian point of view on events happening in Russia and around the globe."
+    },
+    {
+      "rank": 5,
+      "id": "sky-news",
+      "name": "Sky News",
+      "country": "United Kingdom",
+      "category": "News",
+      "language": "English",
+      "views": 7507334,
+      "sourcePage": "http://www.freeintertv.com/view/id-262",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image/skynews.jpg",
+      "description": "News Channel"
+    },
+    {
+      "rank": 6,
+      "id": "bloomberg-us",
+      "name": "Bloomberg U.S.",
+      "country": "USA",
+      "category": "News",
+      "language": "English",
+      "views": 3984529,
+      "sourcePage": "http://www.freeintertv.com/view/id-2991",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/bloomberg_us.jpg",
+      "description": "Bloomberg Television is a 24-hour global network dedicated to providing viewers with business and financial news. It is distributed globally, reaching over 200 million homes worldwide."
+    },
+    {
+      "rank": 7,
+      "id": "citynews-hd",
+      "name": "CityNews HD",
+      "country": "Canada",
+      "category": "News",
+      "language": "English",
+      "views": 1824018,
+      "sourcePage": "http://www.freeintertv.com/view/id-3366",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/250px-CityNews_Channel.jpg",
+      "description": "CityNews Channel broadcasts as an all news format, consisting of local news and information from the GTA, and national and international news. It operates on a 24-hour news wheel with traffic and weather reports every 10 minutes."
+    },
+    {
+      "rank": 8,
+      "id": "gnn-news",
+      "name": "GNN News",
+      "country": "India",
+      "category": "News",
+      "language": "English",
+      "views": 721824,
+      "sourcePage": "http://www.freeintertv.com/view/id-3358",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/gnnnews.jpg",
+      "description": "News channel from India (English)."
+    },
+    {
+      "rank": 9,
+      "id": "al-jazeera",
+      "name": "Al Jazeera English",
+      "country": "Qatar",
+      "category": "News",
+      "language": "English",
+      "views": 608675,
+      "sourcePage": "http://www.freeintertv.com/view/id-3291",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image/aljazeera.jpg",
+      "description": "Al Jazeera English - international English-language news channel headquartered in Doha, Qatar."
+    },
+    {
+      "rank": 10,
+      "id": "fox-news-live",
+      "name": "Fox News Live",
+      "country": "USA",
+      "category": "News",
+      "language": "English",
+      "views": 0,
+      "sourcePage": "http://www.freeintertv.com/view/id-1799",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/foxnews.jpg",
+      "description": "Fox News Channel live stream from USA."
+    },
+    {
+      "rank": 11,
+      "id": "msnbc-live",
+      "name": "MSNBC Live",
+      "country": "USA",
+      "category": "News",
+      "language": "English",
+      "views": 0,
+      "sourcePage": "http://www.freeintertv.com/view/id-2565",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/msnbc.jpg",
+      "description": "MSNBC is a cable news channel based in the United States and available in both the US and Canada."
+    },
+    {
+      "rank": 12,
+      "id": "bbc-live-coverage",
+      "name": "BBC - Live Coverage",
+      "country": "United Kingdom",
+      "category": "News",
+      "language": "English",
+      "views": 0,
+      "sourcePage": "http://www.freeintertv.com/view/id-3322",
+      "logoUrl": "http://www.freeintertv.com/modules/Main/image_1/bbc_live.jpg",
+      "description": "BBC live news coverage from UK."
+    }
+  ],
+  "metadata": {
+    "totalChannels": 12,
+    "source": "freeintertv.com",
+    "scrapedAt": "2026-10-13",
+    "note": "Filtered to English-language news channels only. Removed: RT DE (German), NHK BS2 (Japanese), Canal 24h (Spanish), France 24 (French), India News (Hindi), RTE News Now (Irish), Deutsche Welle (German), Nil News (Arabic). Ranked by view count where available."
+  }
+}

@@ -1,0 +1,1387 @@
+{
+  "status": "success",
+  "timestamp": 1792059170,
+  "source": "https://www.mytelly.co.uk/tv-guide/listings/SkyNight.html",
+  "channels": {
+    "sky-sports-f1-uk": {
+      "id": "sky-sports-f1-uk",
+      "name": "Sky Sports F1",
+      "chNumber": 406,
+      "genre": "Motorsport",
+      "sourceChNumber": "407",
+      "sourceName": "Sky Sports F1",
+      "shows": [
+        {
+          "id": "sky-sports-f1-uk-1800",
+          "title": "Sky Sports F1 Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports F1."
+        },
+        {
+          "id": "sky-sports-f1-uk-2000",
+          "title": "Sky Sports F1 Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports F1."
+        },
+        {
+          "id": "sky-sports-f1-uk-2200",
+          "title": "Sky Sports F1 Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports F1."
+        }
+      ]
+    },
+    "sky-sports-premier-league-uk": {
+      "id": "sky-sports-premier-league-uk",
+      "name": "Sky Sports Premier League",
+      "chNumber": 402,
+      "genre": "Football",
+      "sourceChNumber": "402",
+      "sourceName": "Sky Sports Premier League",
+      "shows": [
+        {
+          "id": "sky-sports-premier-league-uk-1800",
+          "title": "Sky Sports Premier League Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Premier League."
+        },
+        {
+          "id": "sky-sports-premier-league-uk-2000",
+          "title": "Sky Sports Premier League Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Premier League."
+        },
+        {
+          "id": "sky-sports-premier-league-uk-2200",
+          "title": "Sky Sports Premier League Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Premier League."
+        }
+      ]
+    },
+    "sky-sports-tennis-uk": {
+      "id": "sky-sports-tennis-uk",
+      "name": "Sky Sports Tennis",
+      "chNumber": 407,
+      "genre": "Tennis",
+      "sourceChNumber": "408",
+      "sourceName": "Sky Sports Tennis",
+      "shows": [
+        {
+          "id": "sky-sports-tennis-uk-1800",
+          "title": "Sky Sports Tennis Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Tennis."
+        },
+        {
+          "id": "sky-sports-tennis-uk-2000",
+          "title": "Sky Sports Tennis Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Tennis."
+        },
+        {
+          "id": "sky-sports-tennis-uk-2200",
+          "title": "Sky Sports Tennis Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Tennis."
+        }
+      ]
+    },
+    "sky-sports-action-uk": {
+      "id": "sky-sports-action-uk",
+      "name": "Sky Sports Action",
+      "chNumber": 408,
+      "genre": "Action Sports",
+      "sourceChNumber": "404",
+      "sourceName": "Sky Sports Action",
+      "shows": [
+        {
+          "id": "sky-sports-action-uk-1800",
+          "title": "Sky Sports Action Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Action."
+        },
+        {
+          "id": "sky-sports-action-uk-2000",
+          "title": "Sky Sports Action Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Action."
+        },
+        {
+          "id": "sky-sports-action-uk-2200",
+          "title": "Sky Sports Action Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Action."
+        }
+      ]
+    },
+    "sky-sports-main-event-live-uk": {
+      "id": "sky-sports-main-event-live-uk",
+      "name": "Sky Sports Main Event",
+      "chNumber": 401,
+      "genre": "Top Events",
+      "sourceChNumber": "401",
+      "sourceName": "Sky Sports Main Event",
+      "shows": [
+        {
+          "id": "sky-sports-main-event-live-uk-1800",
+          "title": "Sky Sports Main Event Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Main Event."
+        },
+        {
+          "id": "sky-sports-main-event-live-uk-2000",
+          "title": "Sky Sports Main Event Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Main Event."
+        },
+        {
+          "id": "sky-sports-main-event-live-uk-2200",
+          "title": "Sky Sports Main Event Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Main Event."
+        }
+      ]
+    },
+    "sky-sports-cricket-uk": {
+      "id": "sky-sports-cricket-uk",
+      "name": "Sky Sports Cricket",
+      "chNumber": 404,
+      "genre": "Cricket",
+      "sourceChNumber": "405",
+      "sourceName": "Sky Sports Cricket",
+      "shows": [
+        {
+          "id": "sky-sports-cricket-uk-1800",
+          "title": "Sky Sports Cricket Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Cricket."
+        },
+        {
+          "id": "sky-sports-cricket-uk-2000",
+          "title": "Sky Sports Cricket Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Cricket."
+        },
+        {
+          "id": "sky-sports-cricket-uk-2200",
+          "title": "Sky Sports Cricket Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Cricket."
+        }
+      ]
+    },
+    "sky-sports-golf-uk": {
+      "id": "sky-sports-golf-uk",
+      "name": "Sky Sports Golf",
+      "chNumber": 405,
+      "genre": "Golf",
+      "sourceChNumber": "406",
+      "sourceName": "Sky Sports Golf",
+      "shows": [
+        {
+          "id": "sky-sports-golf-uk-1800",
+          "title": "Sky Sports Golf Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Golf."
+        },
+        {
+          "id": "sky-sports-golf-uk-2000",
+          "title": "Sky Sports Golf Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Golf."
+        },
+        {
+          "id": "sky-sports-golf-uk-2200",
+          "title": "Sky Sports Golf Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Golf."
+        }
+      ]
+    },
+    "sky-sports-racing-uk": {
+      "id": "sky-sports-racing-uk",
+      "name": "Sky Sports Racing",
+      "chNumber": 415,
+      "genre": "Horse Racing",
+      "sourceChNumber": "415",
+      "sourceName": "Sky Sports Racing",
+      "shows": [
+        {
+          "id": "sky-sports-racing-uk-1800",
+          "title": "Sky Sports Racing Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Racing."
+        },
+        {
+          "id": "sky-sports-racing-uk-2000",
+          "title": "Sky Sports Racing Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Racing."
+        },
+        {
+          "id": "sky-sports-racing-uk-2200",
+          "title": "Sky Sports Racing Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Racing."
+        }
+      ]
+    },
+    "sky-sports-news-uk": {
+      "id": "sky-sports-news-uk",
+      "name": "Sky Sports News",
+      "chNumber": 409,
+      "genre": "Sports News",
+      "sourceChNumber": "409",
+      "sourceName": "Sky Sports News",
+      "shows": [
+        {
+          "id": "sky-sports-news-uk-1800",
+          "title": "Sky Sports News Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports News."
+        },
+        {
+          "id": "sky-sports-news-uk-2000",
+          "title": "Sky Sports News Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports News."
+        },
+        {
+          "id": "sky-sports-news-uk-2200",
+          "title": "Sky Sports News Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports News."
+        }
+      ]
+    },
+    "sky-sports-mix-uk": {
+      "id": "sky-sports-mix-uk",
+      "name": "Sky Sports Mix",
+      "chNumber": 416,
+      "genre": "Multi-Sport",
+      "sourceChNumber": "416",
+      "sourceName": "Sky Sports Mix",
+      "shows": [
+        {
+          "id": "sky-sports-mix-uk-1800",
+          "title": "Sky Sports Mix Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Mix."
+        },
+        {
+          "id": "sky-sports-mix-uk-2000",
+          "title": "Sky Sports Mix Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Mix."
+        },
+        {
+          "id": "sky-sports-mix-uk-2200",
+          "title": "Sky Sports Mix Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Mix."
+        }
+      ]
+    },
+    "sky-sports-football-uk": {
+      "id": "sky-sports-football-uk",
+      "name": "Sky Sports Football",
+      "chNumber": 403,
+      "genre": "Football",
+      "sourceChNumber": "403",
+      "sourceName": "Sky Sports Football",
+      "shows": [
+        {
+          "id": "sky-sports-football-uk-1800",
+          "title": "Sky Sports Football Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Football."
+        },
+        {
+          "id": "sky-sports-football-uk-2000",
+          "title": "Sky Sports Football Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Football."
+        },
+        {
+          "id": "sky-sports-football-uk-2200",
+          "title": "Sky Sports Football Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Football."
+        }
+      ]
+    },
+    "sky-sports-plus-uk": {
+      "id": "sky-sports-plus-uk",
+      "name": "Sky Sports Plus",
+      "chNumber": 412,
+      "genre": "Live Events",
+      "sourceChNumber": "404",
+      "sourceName": "Sky Sports Plus",
+      "shows": [
+        {
+          "id": "sky-sports-plus-uk-1800",
+          "title": "Sky Sports Plus Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports Plus."
+        },
+        {
+          "id": "sky-sports-plus-uk-2000",
+          "title": "Sky Sports Plus Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports Plus."
+        },
+        {
+          "id": "sky-sports-plus-uk-2200",
+          "title": "Sky Sports Plus Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports Plus."
+        }
+      ]
+    },
+    "sky-sports-laliga-uk": {
+      "id": "sky-sports-laliga-uk",
+      "name": "Sky Sports LaLiga",
+      "chNumber": 410,
+      "genre": "Football",
+      "sourceChNumber": "403",
+      "sourceName": "Sky Sports LaLiga",
+      "shows": [
+        {
+          "id": "sky-sports-laliga-uk-1800",
+          "title": "Sky Sports LaLiga Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Sports LaLiga."
+        },
+        {
+          "id": "sky-sports-laliga-uk-2000",
+          "title": "Sky Sports LaLiga Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Sports LaLiga."
+        },
+        {
+          "id": "sky-sports-laliga-uk-2200",
+          "title": "Sky Sports LaLiga Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Sports LaLiga."
+        }
+      ]
+    },
+    "sky-atlantic-uk": {
+      "id": "sky-atlantic-uk",
+      "name": "Sky Atlantic UK",
+      "chNumber": 108,
+      "genre": "HBO & Prestige",
+      "sourceChNumber": "108",
+      "sourceName": "Sky Atlantic UK",
+      "shows": [
+        {
+          "id": "sky-atlantic-uk-1800",
+          "title": "Sky Atlantic UK Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Atlantic UK."
+        },
+        {
+          "id": "sky-atlantic-uk-2000",
+          "title": "Sky Atlantic UK Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Atlantic UK."
+        },
+        {
+          "id": "sky-atlantic-uk-2200",
+          "title": "Sky Atlantic UK Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Atlantic UK."
+        }
+      ]
+    },
+    "sky-showcase": {
+      "id": "sky-showcase",
+      "name": "Sky Showcase",
+      "chNumber": 106,
+      "genre": "Entertainment",
+      "sourceChNumber": "106",
+      "sourceName": "Sky Showcase",
+      "shows": [
+        {
+          "id": "sky-showcase-1800",
+          "title": "Sky Showcase Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Showcase."
+        },
+        {
+          "id": "sky-showcase-2000",
+          "title": "Sky Showcase Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Showcase."
+        },
+        {
+          "id": "sky-showcase-2200",
+          "title": "Sky Showcase Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Showcase."
+        }
+      ]
+    },
+    "sky-comedy-uk": {
+      "id": "sky-comedy-uk",
+      "name": "Sky Comedy UK",
+      "chNumber": 113,
+      "genre": "Comedy",
+      "sourceChNumber": "113",
+      "sourceName": "Sky Comedy UK",
+      "shows": [
+        {
+          "id": "sky-comedy-uk-1800",
+          "title": "Sky Comedy UK Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Comedy UK."
+        },
+        {
+          "id": "sky-comedy-uk-2000",
+          "title": "Sky Comedy UK Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Comedy UK."
+        },
+        {
+          "id": "sky-comedy-uk-2200",
+          "title": "Sky Comedy UK Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Comedy UK."
+        }
+      ]
+    },
+    "sky-crime-uk": {
+      "id": "sky-crime-uk",
+      "name": "Sky Crime UK",
+      "chNumber": 121,
+      "genre": "True Crime",
+      "sourceChNumber": "121",
+      "sourceName": "Sky Crime UK",
+      "shows": [
+        {
+          "id": "sky-crime-uk-1800",
+          "title": "Sky Crime UK Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Crime UK."
+        },
+        {
+          "id": "sky-crime-uk-2000",
+          "title": "Sky Crime UK Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Crime UK."
+        },
+        {
+          "id": "sky-crime-uk-2200",
+          "title": "Sky Crime UK Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Crime UK."
+        }
+      ]
+    },
+    "sky-history-uk": {
+      "id": "sky-history-uk",
+      "name": "Sky History UK",
+      "chNumber": 123,
+      "genre": "Documentaries",
+      "sourceChNumber": "123",
+      "sourceName": "Sky History UK",
+      "shows": [
+        {
+          "id": "sky-history-uk-1800",
+          "title": "Sky History UK Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky History UK."
+        },
+        {
+          "id": "sky-history-uk-2000",
+          "title": "Sky History UK Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky History UK."
+        },
+        {
+          "id": "sky-history-uk-2200",
+          "title": "Sky History UK Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky History UK."
+        }
+      ]
+    },
+    "sky-arts-uk": {
+      "id": "sky-arts-uk",
+      "name": "Sky Arts UK",
+      "chNumber": 130,
+      "genre": "Culture & Arts",
+      "sourceChNumber": "122",
+      "sourceName": "Sky Arts UK",
+      "shows": [
+        {
+          "id": "sky-arts-uk-1800",
+          "title": "Sky Arts UK Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Arts UK."
+        },
+        {
+          "id": "sky-arts-uk-2000",
+          "title": "Sky Arts UK Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Arts UK."
+        },
+        {
+          "id": "sky-arts-uk-2200",
+          "title": "Sky Arts UK Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Arts UK."
+        }
+      ]
+    },
+    "sky-news": {
+      "id": "sky-news",
+      "name": "Sky News",
+      "chNumber": 501,
+      "genre": "24/7 News",
+      "sourceChNumber": "501",
+      "sourceName": "Sky News",
+      "shows": [
+        {
+          "id": "sky-news-1800",
+          "title": "Sky News Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky News."
+        },
+        {
+          "id": "sky-news-2000",
+          "title": "Sky News Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky News."
+        },
+        {
+          "id": "sky-news-2200",
+          "title": "Sky News Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky News."
+        }
+      ]
+    },
+    "sky-cinema-premiere-uk": {
+      "id": "sky-cinema-premiere-uk",
+      "name": "Sky Cinema Premiere",
+      "chNumber": 301,
+      "genre": "New Releases",
+      "sourceChNumber": "301",
+      "sourceName": "Sky Cinema Premiere",
+      "shows": [
+        {
+          "id": "sky-cinema-premiere-uk-1800",
+          "title": "Sky Cinema Premiere Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Premiere."
+        },
+        {
+          "id": "sky-cinema-premiere-uk-2000",
+          "title": "Sky Cinema Premiere Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Premiere."
+        },
+        {
+          "id": "sky-cinema-premiere-uk-2200",
+          "title": "Sky Cinema Premiere Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Premiere."
+        }
+      ]
+    },
+    "sky-cinema-select-uk": {
+      "id": "sky-cinema-select-uk",
+      "name": "Sky Cinema Select",
+      "chNumber": 302,
+      "genre": "Specials",
+      "sourceChNumber": "302",
+      "sourceName": "Sky Cinema Select",
+      "shows": [
+        {
+          "id": "sky-cinema-select-uk-1800",
+          "title": "Sky Cinema Select Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Select."
+        },
+        {
+          "id": "sky-cinema-select-uk-2000",
+          "title": "Sky Cinema Select Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Select."
+        },
+        {
+          "id": "sky-cinema-select-uk-2200",
+          "title": "Sky Cinema Select Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Select."
+        }
+      ]
+    },
+    "sky-cinema-hits-uk": {
+      "id": "sky-cinema-hits-uk",
+      "name": "Sky Cinema Hits",
+      "chNumber": 303,
+      "genre": "Blockbusters",
+      "sourceChNumber": "303",
+      "sourceName": "Sky Cinema Hits",
+      "shows": [
+        {
+          "id": "sky-cinema-hits-uk-1800",
+          "title": "Sky Cinema Hits Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Hits."
+        },
+        {
+          "id": "sky-cinema-hits-uk-2000",
+          "title": "Sky Cinema Hits Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Hits."
+        },
+        {
+          "id": "sky-cinema-hits-uk-2200",
+          "title": "Sky Cinema Hits Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Hits."
+        }
+      ]
+    },
+    "sky-cinema-greats-uk": {
+      "id": "sky-cinema-greats-uk",
+      "name": "Sky Cinema Greats",
+      "chNumber": 304,
+      "genre": "All-Time Classics",
+      "sourceChNumber": "307",
+      "sourceName": "Sky Cinema Greats",
+      "shows": [
+        {
+          "id": "sky-cinema-greats-uk-1800",
+          "title": "Sky Cinema Greats Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Greats."
+        },
+        {
+          "id": "sky-cinema-greats-uk-2000",
+          "title": "Sky Cinema Greats Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Greats."
+        },
+        {
+          "id": "sky-cinema-greats-uk-2200",
+          "title": "Sky Cinema Greats Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Greats."
+        }
+      ]
+    },
+    "sky-cinema-family-uk": {
+      "id": "sky-cinema-family-uk",
+      "name": "Sky Cinema Family",
+      "chNumber": 305,
+      "genre": "Kids & Family",
+      "sourceChNumber": "304",
+      "sourceName": "Sky Cinema Family",
+      "shows": [
+        {
+          "id": "sky-cinema-family-uk-1800",
+          "title": "Sky Cinema Family Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Family."
+        },
+        {
+          "id": "sky-cinema-family-uk-2000",
+          "title": "Sky Cinema Family Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Family."
+        },
+        {
+          "id": "sky-cinema-family-uk-2200",
+          "title": "Sky Cinema Family Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Family."
+        }
+      ]
+    },
+    "sky-cinema-action-uk": {
+      "id": "sky-cinema-action-uk",
+      "name": "Sky Cinema Action",
+      "chNumber": 306,
+      "genre": "Action & Thrills",
+      "sourceChNumber": "306",
+      "sourceName": "Sky Cinema Action",
+      "shows": [
+        {
+          "id": "sky-cinema-action-uk-1800",
+          "title": "Sky Cinema Action Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Action."
+        },
+        {
+          "id": "sky-cinema-action-uk-2000",
+          "title": "Sky Cinema Action Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Action."
+        },
+        {
+          "id": "sky-cinema-action-uk-2200",
+          "title": "Sky Cinema Action Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Action."
+        }
+      ]
+    },
+    "sky-cinema-comedy-uk": {
+      "id": "sky-cinema-comedy-uk",
+      "name": "Sky Cinema Comedy",
+      "chNumber": 307,
+      "genre": "Comedy Movies",
+      "sourceChNumber": "308",
+      "sourceName": "Sky Cinema Comedy",
+      "shows": [
+        {
+          "id": "sky-cinema-comedy-uk-1800",
+          "title": "Sky Cinema Comedy Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Comedy."
+        },
+        {
+          "id": "sky-cinema-comedy-uk-2000",
+          "title": "Sky Cinema Comedy Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Comedy."
+        },
+        {
+          "id": "sky-cinema-comedy-uk-2200",
+          "title": "Sky Cinema Comedy Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Comedy."
+        }
+      ]
+    },
+    "sky-cinema-thriller-uk": {
+      "id": "sky-cinema-thriller-uk",
+      "name": "Sky Cinema Thriller",
+      "chNumber": 308,
+      "genre": "Suspense",
+      "sourceChNumber": "309",
+      "sourceName": "Sky Cinema Thriller",
+      "shows": [
+        {
+          "id": "sky-cinema-thriller-uk-1800",
+          "title": "Sky Cinema Thriller Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Thriller."
+        },
+        {
+          "id": "sky-cinema-thriller-uk-2000",
+          "title": "Sky Cinema Thriller Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Thriller."
+        },
+        {
+          "id": "sky-cinema-thriller-uk-2200",
+          "title": "Sky Cinema Thriller Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Thriller."
+        }
+      ]
+    },
+    "sky-cinema-drama-uk": {
+      "id": "sky-cinema-drama-uk",
+      "name": "Sky Cinema Drama",
+      "chNumber": 309,
+      "genre": "Acclaimed Drama",
+      "sourceChNumber": "310",
+      "sourceName": "Sky Cinema Drama",
+      "shows": [
+        {
+          "id": "sky-cinema-drama-uk-1800",
+          "title": "Sky Cinema Drama Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Drama."
+        },
+        {
+          "id": "sky-cinema-drama-uk-2000",
+          "title": "Sky Cinema Drama Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Drama."
+        },
+        {
+          "id": "sky-cinema-drama-uk-2200",
+          "title": "Sky Cinema Drama Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Drama."
+        }
+      ]
+    },
+    "sky-cinema-sci-fi-horror-uk": {
+      "id": "sky-cinema-sci-fi-horror-uk",
+      "name": "Sky Cinema Sci-Fi Horror",
+      "chNumber": 310,
+      "genre": "Sci-Fi & Cult",
+      "sourceChNumber": "311",
+      "sourceName": "Sky Cinema Sci-Fi Horror",
+      "shows": [
+        {
+          "id": "sky-cinema-sci-fi-horror-uk-1800",
+          "title": "Sky Cinema Sci-Fi Horror Live",
+          "timeStr": "6:00 pm",
+          "start": "18:00",
+          "end": "20:00",
+          "startHour": 18,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Live",
+          "desc": "Live coverage on Sky Cinema Sci-Fi Horror."
+        },
+        {
+          "id": "sky-cinema-sci-fi-horror-uk-2000",
+          "title": "Sky Cinema Sci-Fi Horror Primetime",
+          "timeStr": "8:00 pm",
+          "start": "20:00",
+          "end": "22:00",
+          "startHour": 20,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Primetime",
+          "desc": "Evening showcase on Sky Cinema Sci-Fi Horror."
+        },
+        {
+          "id": "sky-cinema-sci-fi-horror-uk-2200",
+          "title": "Sky Cinema Sci-Fi Horror Late Edition",
+          "timeStr": "10:00 pm",
+          "start": "22:00",
+          "end": "24:00",
+          "startHour": 22,
+          "startMin": 0,
+          "durationMinutes": 120,
+          "tag": "Late",
+          "desc": "Night broadcast on Sky Cinema Sci-Fi Horror."
+        }
+      ]
+    }
+  }
+}

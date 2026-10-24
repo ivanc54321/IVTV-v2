@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <rect width="200" height="120" rx="16" fill="#141d19" stroke="#00f076" stroke-width="2"/>
+  <text x="100" y="65" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="20" fill="#ffffff">Movies For You</text>
+  <text x="100" y="90" text-anchor="middle" font-family="sans-serif" font-weight="600" font-size="12" fill="#00f076">LIVE TV</text>
+</svg>
